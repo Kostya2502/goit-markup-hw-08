@@ -1,0 +1,110 @@
+.feature-list {
+	// display: flex;
+	text-align: center;
+
+	@media screen and (min-width: 768px) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.thumb {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 30px;
+		// width: 270px;
+		// height: 120px;
+		background-color: $secondary-bg-color;
+
+		@media screen and (min-width: 480px) {
+			width: 450px;
+			height: 120px;
+		}
+
+		@media screen and (min-width: 768px) {
+			width: 354px;
+			height: 120px;
+		}
+
+		@media screen and (min-width: 1200px) {
+			width: 100%;
+			height: 120px;
+		}
+	}
+
+	.title {
+		margin-top: 0;
+		margin-bottom: 10px;
+
+		color: $title-text-color;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 1.14;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: 0;
+		margin-top: 0;
+
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 1.71;
+		text-align: left;
+
+		// @media screen and (min-width: 480px) {
+		// 	text-align: left;
+		// }
+	}
+}
+
+.feature-icon {
+	width: 70px;
+	height: 70px;
+}
+
+.feature-list .item {
+	@media screen and (min-width: 480px) and (max-width: 767px) {
+		width: 450px;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		width: 354px;
+		margin-bottom: 30px;
+
+		&:nth-last-child(-n + 2) {
+			margin-bottom: 0;
+		}
+		&:nth-child(odd) {
+			margin-right: 30px;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		// width: calc((100% -90px) / 4);
+		width: 270px;
+
+		& + .item {
+			margin-left: 30px;
+		}
+	}
+
+	// width: calc((100% -90px) / 4);
+
+	&:nth-child(1)::before {
+		background-image: url(../img/Group.svg);
+	}
+	&:nth-child(2)::before {
+		background-image: url(../img/clock.svg);
+	}
+	&:nth-child(3)::before {
+		background-image: url(../img/diagram.svg);
+	}
+	&:nth-child(4)::before {
+		background-image: url(../img/astronaut.svg);
+	}
+}

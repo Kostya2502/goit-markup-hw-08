@@ -1,0 +1,93 @@
+.overlay {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	max-width: 1600px;
+	// height: 600px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Header-mob.jpg);
+	background-color: #c4c4c4;
+}
+
+@media (min-resolution: 2dppx) {
+	.overlay {
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Header-mob@2x.jpg);
+	}
+}
+
+@media screen and (min-width: 550px) and (max-width: 960px) {
+	.overlay {
+		padding-top: 200px;
+		padding-bottom: 200px;
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Header-tab.jpg);
+	}
+
+	@media (min-resolution: 2dppx) {
+		.overlay {
+			background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Header-tab@2x.jpg);
+		}
+	}
+}
+
+@media screen and (min-width: 961px) {
+	.overlay {
+		padding-top: 200px;
+		padding-bottom: 200px;
+		background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/header-desktop.jpg);
+	}
+
+	@media (min-resolution: 2dppx) {
+		.overlay {
+			background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/header-desktop@2x.jpg);
+		}
+	}
+}
+
+.hero {
+	display: block;
+	text-align: center;
+
+	&-title {
+		// display: block;
+		margin-top: 0;
+		margin-bottom: 40px;
+		margin-left: auto;
+		margin-right: auto;
+
+		color: $secondary-text-color;
+		max-width: 360px;
+
+		height: 120px;
+		font-weight: 900;
+		font-size: 26px;
+		line-height: 1.36;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+
+		@media screen and (max-width: 767px) {
+			margin-bottom: 30px;
+			height: 84px;
+		}
+
+		@media screen and (min-width: 768px) {
+			font-size: 44px;
+			max-width: 696px;
+		}
+	}
+}
+
+.button,
+.btn-subscribe {
+	align-items: center;
+	display: inline-block;
+	padding: 10px 32px;
+	border-radius: 4px;
+
+	color: $secondary-text-color;
+	background-color: $accent-color;
+	text-decoration: none;
+}
