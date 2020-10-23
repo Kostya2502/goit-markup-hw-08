@@ -6,6 +6,12 @@
 	text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+	img {
+		width: 100%;
+	}
+}
+
 .team,
 .clients {
 	margin-top: 0;
@@ -52,8 +58,11 @@
 		background-color: $primary-bg-color;
 
 		@media screen and (max-width: 767px) {
-			max-width: 450px;
-			// height: 622px;
+			max-width: unset;
+		}
+
+		&:not(last-child) {
+			margin-bottom: 30px;
 		}
 
 		@media screen and (min-width: 768px) and (max-width: 1199px) {

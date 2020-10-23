@@ -12,10 +12,13 @@
 }
 
 header {
+	// display: none;
 	border: 1px solid #ececec;
+	height: 80px;
 }
 
 .main-container {
+	position: relative;
 	display: flex;
 	align-items: center;
 }
@@ -23,6 +26,21 @@ header {
 .nav-logo {
 	display: flex;
 	align-items: center;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
+}
+
+.logo-mob {
+	padding: 25px 0;
+	margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+	.logo-mob {
+		display: none;
+	}
 }
 
 .site-nav {
@@ -71,6 +89,10 @@ header {
 .info {
 	display: flex;
 	margin-left: auto;
+
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 
 	@media screen and (min-width: 768px) and (max-width: 1199px) {
 		flex-direction: column;
@@ -124,27 +146,47 @@ header {
 	}
 }
 
-// .menu-button .icon-close {
-// 	display: none;
+.menu-button .icon-close {
+	display: none;
+}
+
+.menu-dutton.is-open .icon-close {
+	display: block;
+}
+
+.menu-dutton.is-open .icon-menu {
+	display: none;
+}
+
+.menu-button {
+	display: inline-flex;
+	margin: 0;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+
+	@media screen and (min-width: 768px) {
+		display: none;
+	}
+
+	// &:hover,
+	// &:focus {
+	// 	color: $accent-color;
+	// }
+}
+
+// .menu-mob {
+// 	position: absolute;
+// 	top: 100%;
+// 	bottom: 0;
+// 	height: 393px;
+// 	max-width: 480px;
+
+// 	@media screen and (min-width: 768px) {
+// 		display: none;
+// 	}
 // }
 
-// .menu-dutton.is-open .icon-close {
-// 	display: black;
-// }
-
-// .menu-dutton.is-open .icon-menu {
-// 	display: none;
-// }
-
-// .menu-button {
-// 	display: inline-flex;
-// 	margin: 0;
-// 	padding: 0;
-// 	border: none;
-// 	background-color: transparent;
-
-// 	// &:hover,
-// 	// &:focus {
-// 	// 	color: $accent-color;
-// 	// }
+// .mob-nav {
+// 	background-color: white;
 // }
