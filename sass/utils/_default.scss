@@ -3,11 +3,19 @@ body {
 	color: $primary-text-color;
 	font-family: Roboto, sans-serif;
 	letter-spacing: 0.03em;
+
+	// pashalka)))
+	@media screen and (width: 999px) {
+		background-color: $pashalka-bg-color;
+	}
 }
 .list {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+}
+address {
+	font-style: normal;
 }
 img {
 	display: block;

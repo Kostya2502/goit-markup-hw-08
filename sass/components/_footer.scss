@@ -14,12 +14,25 @@
 		font-style: normal;
 	}
 
+	.logo {
+		color: $accent-color;
+
+		@media screen and (max-width: 767px) {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
+
 	.link {
 		color: rgba(255, 255, 255, 0.6);
 		font-weight: 400;
 		font-size: 14px;
 		line-height: 1.71;
 		text-decoration: none;
+
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			margin-right: auto;
+		}
 	}
 
 	b {
@@ -69,6 +82,12 @@
 
 	& .logo {
 		margin-bottom: 20px;
+
+		@media screen and (min-width: 768px) and (max-width: 1199px) {
+			margin-left: 40px;
+			margin-right: auto;
+			// margin-bottom: 60px;
+		}
 	}
 
 	& .inverse {
@@ -96,6 +115,8 @@
 
 		@media screen and (min-width: 768px) and (max-width: 1199px) {
 			// margin-left: auto;
+			// align-items: center;
+			margin-left: 40px;
 			margin-right: auto;
 			margin-bottom: 60px;
 		}
@@ -103,6 +124,12 @@
 
 	&-links {
 		width: 270px;
+
+		// @media screen and (max-width: 1199px) {
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// 	// margin-bottom: 60px;
+		// }
 
 		@media screen and (max-width: 767px) {
 			margin-left: auto;
@@ -138,6 +165,20 @@
 .link.top {
 	margin-top: 0;
 	margin-bottom: 9px;
+
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin-left: 40px;
+		margin-right: auto;
+		// margin-bottom: 60px;
+	}
+}
+
+.link.bottom {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		margin-left: 40px;
+		margin-right: auto;
+		// margin-bottom: 60px;
+	}
 }
 
 .social-link.link-inverse {
