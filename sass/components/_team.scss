@@ -12,6 +12,12 @@
 	}
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	img {
+		width: 100%;
+	}
+}
+
 .team,
 .clients {
 	margin-top: 0;
@@ -66,8 +72,8 @@
 		}
 
 		@media screen and (min-width: 768px) and (max-width: 1199px) {
-			// width: 354px;
-			// height: 536px;
+			// max-width: unset;
+			width: calc((100% - 60px) / 2);
 		}
 	}
 
